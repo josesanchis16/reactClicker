@@ -1,0 +1,36 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    margin: auto;
+    background: #454545;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+
+.itemMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 32px;
+    height: 35px;
+}
+
+.itemMenu > img {
+    background: #537be9;
+    border-radius: 10px;
+    box-shadow: 0 4px 3px 0 #295391;
+    transition: 0.4s;
+}
+
+.itemMenu > img:hover{
+    margin-top: 5px;
+    box-shadow: none;
+    transition: 0.2s;
+}
