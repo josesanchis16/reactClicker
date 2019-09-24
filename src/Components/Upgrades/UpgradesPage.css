@@ -1,15 +1,54 @@
 .divUpgrades {
     position: absolute;
-    top: 10px;
+    top: 0;
+    bottom: 0;
     left: 0;
-    right : 0;
+    right: 0;
     margin: auto;
+    overflow: auto;
 }
 
-.upgradesTitle{
+.upgradesTitle {
     color: #eee;
     font-weight: bold;
     text-align: center;
     font-size: 2em;
-    
+}
+
+.upgradesSections {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    color: #eee;
+}
+
+.upgradesSubTitle {
+    font-size: 1.2em;
+}
+
+.scrollUpgrades {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 217px;
+}
+
+.scrollUpgrades>img {
+    width: 128px;
+    min-height: 164px;
+    height: auto;
+    margin: 5px;
+    box-shadow: 0 7px 0 0 #917004;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.scrollUpgrades>img:hover {
+    transition:  0.2s;
+    box-shadow: none;
+    margin-top: 20px;
 }
