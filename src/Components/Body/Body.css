@@ -15,11 +15,11 @@ section {
 }
 
 @keyframes background {
-    0%, 100%{
+    0%, 100% {
         background-position-x: 0;
         background-position-y: 0;
     }
-    50%{
+    50% {
         background-position-x: 50%;
         background-position-y: 50%;
     }
@@ -43,4 +43,20 @@ section {
     max-width: 384px;
     max-height: 472px;
     height: auto;
+}
+
+menu {
+    background: #222222ca;
+    position: absolute;
+    top: 105px;
+    bottom: 100px;
+    right: 10px;
+    left: 10px;
+    border-radius: 10px;
+    margin: auto;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }

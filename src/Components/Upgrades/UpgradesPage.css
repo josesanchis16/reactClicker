@@ -1,0 +1,15 @@
+.divUpgrades {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right : 0;
+    margin: auto;
+}
+
+.upgradesTitle{
+    color: #eee;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+    
+}
