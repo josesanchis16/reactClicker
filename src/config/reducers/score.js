@@ -2,7 +2,7 @@ const initialScore = {
     score: 0,
     scoreMult: 1,
     scorePerSec: 0,
-    scorePerClick : 1,
+    scorePerClick: 1,
 }
 
 function score(state = initialScore, action) {

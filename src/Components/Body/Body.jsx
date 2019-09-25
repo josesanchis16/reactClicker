@@ -8,10 +8,19 @@ import Upgrades from './../Upgrades/UpgradesPage';
 
 //Import styles
 import './Body.css';
+import { lookupService } from 'dns';
+import { thisExpression } from '@babel/types';
 
 class Body extends Component {
     constructor(props) {
         super(props);
+        this.clicked = false;
+    }
+
+    clickDown = () => {
+        this.clicked = true;
+        console.log(this.clicked);
+        this.forceUpdate();
     }
 
     clickUp = () => {
@@ -21,9 +30,9 @@ class Body extends Component {
             const action = {
                 type: 'inc'
             }
-
             store.dispatch(action);
-            console.log('dipatch lanzado');
+            this.clicked = false;
+            this.forceUpdate();
         } catch (e) {
             console.log(e);
         }
@@ -32,8 +41,13 @@ class Body extends Component {
     render() {
         return (
             <section>
-                <div className="clicker" onMouseUp={this.clickUp}>
-                    <img className="fruit" src="/image/fruits/apple.png" alt="floor" />
+                <div className="clicker">
+                    <img className="fruit" 
+                    onMouseDown={this.clickDown} 
+                    onMouseUp={this.clickUp}
+                    src="/image/fruits/apple.png" 
+                    alt="floor" 
+                    style={{ width: this.clicked ? '350px' : '384px' }} />
                 </div>
                 <Upgrades />
             </section >

@@ -1,13 +1,31 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import store from './../../store';
+
 //Import Styles
 import './Header.css';
+import { thisExpression } from '@babel/types';
+
+let score = {};
 
 class Header extends Component {
     constructor(props) {
         super(props);
     }
+
+    scoreState = 0;
+
+    componentDidMount() {
+        this.subscribe();
+    }
+    handleChange = () => {
+        score = mapStateToProps(store.getState());
+        this.scoreState = score.score;
+        this.forceUpdate();
+    }
+
+    subscribe = () => store.subscribe(this.handleChange);
 
     render() {
         return (
@@ -20,7 +38,7 @@ class Header extends Component {
                     </div>
                     <div className="infoField">
                         <img src="/image/coin.png" />
-                        <p className="clicksField">{this.props.score}</p>
+                        <p className="clicksField">{this.scoreState}</p>
                     </div>
                     <div className="externalButton">
                         <a className="roundButtonSmall" href="https://www.google.com">
