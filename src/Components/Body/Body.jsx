@@ -51,12 +51,12 @@ class Body extends Component {
             <section>
                 <div className="clicker">
                     <img className="fruit"
-                        onMouseDown={this.clickDown}
-                        onMouseUp={this.clickUp}
+                        onPointerDown={this.clickDown}
                         onMouseLeave={this.mouseOut}
+                        onPointerUp={this.clickUp}
                         src="/image/fruits/apple.png"
                         alt="floor"
-                        style={{ width: this.clicked ? '350px' : '384px' }} />
+                        style={{ width: this.clicked ? '250px' : '100%' }} />
                 </div>
                 <Info />
                 <Share />

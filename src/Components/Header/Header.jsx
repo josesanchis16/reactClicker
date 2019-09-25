@@ -5,7 +5,6 @@ import store from './../../store';
 
 //Import Styles
 import './Header.css';
-import { thisExpression } from '@babel/types';
 
 let score = {};
 
@@ -84,20 +83,20 @@ class Header extends Component {
             <header>
                 <div className="headerGeneral">
                     <div className="externalButton">
-                        <img onMouseUp={this.clickInfo} className="roundButtonSmall" src="/image/fruits/info.png" alt="" />
+                        <img onPointerUp={this.clickInfo} className="roundButtonSmall" src="/image/fruits/info.png" alt="" />
                     </div>
                     <div className="externalButton">
-                        <img onMouseUp={this.clickShare} className="roundButtonSmall" src="/image/fruits/share.png" alt="" />
+                        <img onPointerUp={this.clickShare} className="roundButtonSmall" src="/image/fruits/share.png" alt="" />
                     </div>
                     <div className="infoField">
                         <img src="/image/coin.png" />
                         <p className="clicksField">{this.scoreState}</p>
                     </div>
                     <div className="externalButton">
-                        <img onMouseUp={this.clickProfile} className="roundButtonSmall" src="/image/fruits/profile.png" alt="" />
+                        <img onPointerUp={this.clickProfile} className="roundButtonSmall" src="/image/fruits/profile.png" alt="" />
                     </div>
                     <div className="externalButton">
-                        <img onMouseUp={this.clickSettings} className="roundButtonSmall" src="/image/fruits/settings.png" alt="" />
+                        <img onPointerUp={this.clickSettings} className="roundButtonSmall" src="/image/fruits/settings.png" alt="" />
                     </div>
                 </div>
                 <div className="divNews">

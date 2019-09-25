@@ -55,13 +55,13 @@ class Footer extends Component {
         return (
             <footer>
                 <div className="itemMenu">
-                    <img src="/image/fruits/upgrades.png" alt="upgrades" onMouseUp={this.upgradesClick} />
+                    <img src="/image/fruits/upgrades.png" alt="upgrades" onPointerUp={this.upgradesClick} />
                 </div>
                 <div className="itemMenu">
-                    <img src="/image/fruits/stickers.png" alt="stickers" onMouseUp={this.stickersClick} />
+                    <img src="/image/fruits/stickers.png" alt="stickers" onPointerUp={this.stickersClick} />
                 </div>
                 <div className="itemMenu">
-                    <img src="/image/fruits/statics.png" alt="statics" onMouseUp={this.staticsClick} />
+                    <img src="/image/fruits/statics.png" alt="statics" onPointerUp={this.staticsClick} />
                 </div>
             </footer>
         );
