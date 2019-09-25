@@ -13,3 +13,20 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+.titleGeneral {
+  color: #eee;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2em;
+}
+
+.divPopupGeneral {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: auto;
+}

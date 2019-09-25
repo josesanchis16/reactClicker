@@ -7,14 +7,13 @@ import './UpgradesPage.css';
 class UpgradesPage extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
     }
 
     render() {
         return (
             <menu style={{ display: this.props.upgradesOpen ? "flex" : 'none' }}>
-                <div className="divUpgrades">
-                    <p className="upgradesTitle">Upgrades</p>
+                <div className="divPopupGeneral">
+                    <p className="titleGeneral">Upgrades</p>
                     <hr />
                     <div className="manualUpgrades upgradesSections">
                         <p className="upgradesSubTitle">Manual Upgrades</p>

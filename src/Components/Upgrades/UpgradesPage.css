@@ -1,20 +1,3 @@
-.divUpgrades {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    overflow: auto;
-}
-
-.upgradesTitle {
-    color: #eee;
-    font-weight: bold;
-    text-align: center;
-    font-size: 2em;
-}
-
 .upgradesSections {
     margin: 10px;
     padding: 10px;
@@ -48,7 +31,7 @@
 }
 
 .scrollUpgrades>img:hover {
-    transition:  0.2s;
+    transition: 0.2s;
     box-shadow: none;
     margin-top: 20px;
 }

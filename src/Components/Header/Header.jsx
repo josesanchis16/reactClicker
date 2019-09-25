@@ -27,23 +27,77 @@ class Header extends Component {
 
     subscribe = () => store.subscribe(this.handleChange);
 
+    clickInfo = async () => {
+        const action = {
+            type: "toggleInfo",
+            payload: !this.props.infoOpen,
+        }
+
+        try {
+            await store.dispatch(action);
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
+    clickShare = async () => {
+        const action = {
+            type: "toggleShare",
+            payload: !this.props.shareOpen,
+        }
+
+        try {
+            await store.dispatch(action);
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
+    clickProfile = async () => {
+        const action = {
+            type: "toggleProfile",
+            payload: !this.props.profileOpen,
+        }
+
+        try {
+            await store.dispatch(action);
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
+    clickSettings = async () => {
+        const action = {
+            type: "toggleSettings",
+            payload: !this.props.settingsOpen,
+        }
+
+        try {
+            await store.dispatch(action);
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
     render() {
         return (
             <header>
                 <div className="headerGeneral">
                     <div className="externalButton">
-                        <a className="roundButtonSmall" href="https://www.google.com">
-                            <img src="/image/fruits/share.png" alt="" />
-                        </a>
+                        <img onMouseUp={this.clickInfo} className="roundButtonSmall" src="/image/fruits/info.png" alt="" />
+                    </div>
+                    <div className="externalButton">
+                        <img onMouseUp={this.clickShare} className="roundButtonSmall" src="/image/fruits/share.png" alt="" />
                     </div>
                     <div className="infoField">
                         <img src="/image/coin.png" />
                         <p className="clicksField">{this.scoreState}</p>
                     </div>
                     <div className="externalButton">
-                        <a className="roundButtonSmall" href="https://www.google.com">
-                            <img src="/image/fruits/info.png" alt="" />
-                        </a>
+                        <img onMouseUp={this.clickProfile} className="roundButtonSmall" src="/image/fruits/profile.png" alt="" />
+                    </div>
+                    <div className="externalButton">
+                        <img onMouseUp={this.clickSettings} className="roundButtonSmall" src="/image/fruits/settings.png" alt="" />
                     </div>
                 </div>
                 <div className="divNews">
@@ -60,6 +114,10 @@ class Header extends Component {
 const mapStateToProps = state => {
     return ({
         score: state.score.score,
+        infoOpen: state.openedWindows.infoOpen,
+        shareOpen: state.openedWindows.shareOpen,
+        profileOpen: state.openedWindows.profileOpen,
+        settingsOpen: state.openedWindows.settingsOpen,
     });
 }
 

@@ -2,6 +2,10 @@ const initialState = {
     upgradesOpen: false,
     stickersOpen: false,
     staticsOpen: false,
+    infoOpen: false,
+    shareOpen: false,
+    profileOpen: false,
+    settingsOpen: false,
 }
 
 function openedWindows(state = initialState, action) {
@@ -12,12 +16,20 @@ function openedWindows(state = initialState, action) {
                     upgradesOpen: true,
                     stickersOpen: false,
                     staticsOpen: false,
+                    infoOpen: false,
+                    shareOpen: false,
+                    profileOpen: false,
+                    settingsOpen: false,
                 }
             } else {
                 state = {
                     upgradesOpen: false,
                     stickersOpen: false,
                     staticsOpen: false,
+                    infoOpen: false,
+                    shareOpen: false,
+                    profileOpen: false,
+                    settingsOpen: false,
                 }
             }
             return state;
@@ -28,12 +40,20 @@ function openedWindows(state = initialState, action) {
                     upgradesOpen: false,
                     stickersOpen: true,
                     staticsOpen: false,
+                    infoOpen: false,
+                    shareOpen: false,
+                    profileOpen: false,
+                    settingsOpen: false,
                 }
             } else {
                 state = {
                     upgradesOpen: false,
                     stickersOpen: false,
                     staticsOpen: false,
+                    infoOpen: false,
+                    shareOpen: false,
+                    profileOpen: false,
+                    settingsOpen: false,
                 }
             }
             return state;
@@ -44,12 +64,116 @@ function openedWindows(state = initialState, action) {
                     upgradesOpen: false,
                     stickersOpen: false,
                     staticsOpen: true,
+                    infoOpen: false,
+                    shareOpen: false,
+                    profileOpen: false,
+                    settingsOpen: false,
                 }
             } else {
                 state = {
                     upgradesOpen: false,
                     stickersOpen: false,
                     staticsOpen: false,
+                    infoOpen: false,
+                    shareOpen: false,
+                    profileOpen: false,
+                    settingsOpen: false,
+                }
+            }
+            return state;
+
+        case 'toggleInfo':
+            if (action.payload) {
+                state = {
+                    upgradesOpen: false,
+                    stickersOpen: false,
+                    staticsOpen: false,
+                    infoOpen: true,
+                    shareOpen: false,
+                    profileOpen: false,
+                    settingsOpen: false,
+                }
+            } else {
+                state = {
+                    upgradesOpen: false,
+                    stickersOpen: false,
+                    staticsOpen: false,
+                    infoOpen: false,
+                    shareOpen: false,
+                    profileOpen: false,
+                    settingsOpen: false,
+                }
+            }
+            return state;
+
+        case 'toggleShare':
+            if (action.payload) {
+                state = {
+                    upgradesOpen: false,
+                    stickersOpen: false,
+                    staticsOpen: false,
+                    infoOpen: false,
+                    shareOpen: true,
+                    profileOpen: false,
+                    settingsOpen: false,
+                }
+            } else {
+                state = {
+                    upgradesOpen: false,
+                    stickersOpen: false,
+                    staticsOpen: false,
+                    infoOpen: false,
+                    shareOpen: false,
+                    profileOpen: false,
+                    settingsOpen: false,
+                }
+            }
+            return state;
+
+        case 'toggleProfile':
+            if (action.payload) {
+                state = {
+                    upgradesOpen: false,
+                    stickersOpen: false,
+                    staticsOpen: false,
+                    infoOpen: false,
+                    shareOpen: false,
+                    profileOpen: true,
+                    settingsOpen: false,
+                }
+            } else {
+                state = {
+                    upgradesOpen: false,
+                    stickersOpen: false,
+                    staticsOpen: false,
+                    infoOpen: false,
+                    shareOpen: false,
+                    profileOpen: false,
+                    settingsOpen: false,
+                }
+            }
+            return state;
+
+        case 'toggleSettings':
+            if (action.payload) {
+                state = {
+                    upgradesOpen: false,
+                    stickersOpen: false,
+                    staticsOpen: false,
+                    infoOpen: false,
+                    shareOpen: false,
+                    profileOpen: false,
+                    settingsOpen: true,
+                }
+            } else {
+                state = {
+                    upgradesOpen: false,
+                    stickersOpen: false,
+                    staticsOpen: false,
+                    infoOpen: false,
+                    shareOpen: false,
+                    profileOpen: false,
+                    settingsOpen: false,
                 }
             }
             return state;

@@ -4,12 +4,15 @@ import { connect } from 'react-redux';
 import store from './../../store';
 
 //Import Components
+import Info from './../Info/Info';
+import Share from './../Share/Share';
+import Profile from './../Profile/Profile';
+import Settings from './../Settings/Settings';
+
 import Upgrades from './../Upgrades/UpgradesPage';
 
 //Import styles
 import './Body.css';
-import { lookupService } from 'dns';
-import { thisExpression } from '@babel/types';
 
 class Body extends Component {
     constructor(props) {
@@ -38,17 +41,27 @@ class Body extends Component {
         }
     }
 
+    mouseOut = () => {
+        this.clicked = false;
+        this.forceUpdate();
+    }
+
     render() {
         return (
             <section>
                 <div className="clicker">
-                    <img className="fruit" 
-                    onMouseDown={this.clickDown} 
-                    onMouseUp={this.clickUp}
-                    src="/image/fruits/apple.png" 
-                    alt="floor" 
-                    style={{ width: this.clicked ? '350px' : '384px' }} />
+                    <img className="fruit"
+                        onMouseDown={this.clickDown}
+                        onMouseUp={this.clickUp}
+                        onMouseLeave={this.mouseOut}
+                        src="/image/fruits/apple.png"
+                        alt="floor"
+                        style={{ width: this.clicked ? '350px' : '384px' }} />
                 </div>
+                <Info />
+                <Share />
+                <Profile />
+                <Settings />
                 <Upgrades />
             </section >
         )
