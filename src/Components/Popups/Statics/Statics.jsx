@@ -26,42 +26,31 @@ class Statics extends Component {
                     <hr />
                     <div className="staticsSectionGeneral">
                         <div className="divSection">
-                            <p className="generalSubtitles">InGame Statics</p>
+                            <p className="generalSubtitles">General Statics</p>
                             <hr />
                             <div>
-                                <p>Esto es una estadistica: 10234/123</p>
-                                <p>Esto es una estadistica: 10234/123</p>
-                                <p>Esto es una estadistica: 10234/123</p>
-                                <p>Esto es una estadistica: 10234/123</p>
-                                <p>Esto es una estadistica: 10234/123</p>
-                                <p>Esto es una estadistica: 10234/123</p>
-                                <p>Esto es una estadistica: 10234/123</p>
+                                <p>Actual fruits</p>
+                                <p>Total produced fruits</p>
+                                <p>Run started</p>
+                                <p>Fruits per second</p>
+                                <p>Fruits per click</p>
+                                <p>Hand-made fruits</p>
                             </div>
                         </div>
                         <div className="divSection">
-                            <p className="generalSubtitles">InGame Statics</p>
+                            <p className="generalSubtitles">Updates Statics</p>
                             <hr />
                             <div>
-                                <p>Esto es una estadistica: 10234/123</p>
-                                <p>Esto es una estadistica: 10234/123</p>
-                                <p>Esto es una estadistica: 10234/123</p>
-                                <p>Esto es una estadistica: 10234/123</p>
-                                <p>Esto es una estadistica: 10234/123</p>
-                                <p>Esto es una estadistica: 10234/123</p>
-                                <p>Esto es una estadistica: 10234/123</p>
+                                <p>Upgrades bought</p>
+                                <p>Manual Upgrades</p>
+                                <p>Automatic Upgrades</p>
                             </div>
                         </div>
                         <div className="divSection">
-                            <p className="generalSubtitles">InGame Statics</p>
+                            <p className="generalSubtitles">Stickers Statics</p>
                             <hr />
                             <div>
-                                <p>Esto es una estadistica: 10234/123</p>
-                                <p>Esto es una estadistica: 10234/123</p>
-                                <p>Esto es una estadistica: 10234/123</p>
-                                <p>Esto es una estadistica: 10234/123</p>
-                                <p>Esto es una estadistica: 10234/123</p>
-                                <p>Esto es una estadistica: 10234/123</p>
-                                <p>Esto es una estadistica: 10234/123</p>
+                                <p>Stickers unlocked</p>
                             </div>
                         </div>
                     </div>

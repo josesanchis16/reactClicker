@@ -22,7 +22,7 @@
 .scrollUpgrades {
     padding-top: 10px;
     padding-bottom: 10px;
-    overflow: scroll;
+    overflow: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
