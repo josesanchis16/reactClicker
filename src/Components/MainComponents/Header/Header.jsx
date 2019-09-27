@@ -1,23 +1,72 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import axios from 'axios';
 
-import store from './../../store';
+import store from '../../../store';
 
 //Import Styles
 import './Header.css';
+import { throwStatement, thisExpression } from '@babel/types';
+import { POINT_CONVERSION_COMPRESSED } from 'constants';
 
 let score = {};
+const MAX_FRASES = 20;
 
 class Header extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            frases: [],
+            frase: '...getting new news...'
+        }
+        this.getFrase();
     }
-
     scoreState = 0;
 
     componentDidMount() {
         this.subscribe();
+        setInterval(this.getFrase, 60000);
+        setInterval(this.changeFrase, 10000);
     }
+
+    changeFrase = () => {
+        console.log(this.state.frase);
+        this.setState({
+            frase: this.state.frases[Math.round(Math.random() * this.state.frases.length - 1)],
+        })
+        console.log(this.state.frase);
+    }
+
+    getFrase = async () => {
+        this.setState({
+            frases: []
+        });
+
+        for (let i = 0; i < MAX_FRASES; i++) {
+            await axios.get('https://sv443.net/jokeapi/category/any?blacklistFlags=nsfw').
+                then(data => {
+                    if (data.data.setup) {
+                        const f = data.data.setup;
+                        console.log(data.data.setup);
+                        console.log('Se ha encontrado una frase simple');
+                        this.setState({
+                            frases: [...this.state.frases,
+                                f]
+                        });
+                    }
+                }).catch(e => {
+                    console.log(e);
+                });
+        }
+
+        const numRand = Math.round(Math.random() * this.state.frases.length - 1);
+
+        this.setState({
+            frase: this.state.frases[numRand]
+        })
+        console.log(this.state);
+    }
+
     handleChange = () => {
         score = mapStateToProps(store.getState());
         this.scoreState = score.score;
@@ -102,7 +151,7 @@ class Header extends Component {
                 <div className="divNews">
                     <div className="newsField scroll-left">
                         <img src="/image/banner.png" alt="" />
-                        <p>Esto on las noticias</p>
+                        <p>{this.state.frase}</p>
                     </div>
                 </div>
             </header>

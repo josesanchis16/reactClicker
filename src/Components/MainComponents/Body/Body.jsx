@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import store from './../../store';
+import store from './../../../store';
 
 //Import Components
-import Info from './../Info/Info';
-import Share from './../Share/Share';
-import Profile from './../Profile/Profile';
-import Settings from './../Settings/Settings';
+import Info from './../../Popups/Info/Info';
+import Share from '../../Popups/Share/Share';
+import Profile from '../../Popups/Profile/Profile';
+import Settings from './../../Popups/Settings/Settings';
 
-import Upgrades from './../Upgrades/UpgradesPage';
+import Upgrades from '../../Popups/Upgrades/UpgradesPage';
+import Stickers from '../../Popups/Stickers/Stickers';
+import Statics from '../../Popups/Statics/Statics';
 
 //Import styles
 import './Body.css';
@@ -56,13 +58,15 @@ class Body extends Component {
                         onPointerUp={this.clickUp}
                         src="/image/fruits/apple.png"
                         alt="floor"
-                        style={{ width: this.clicked ? '250px' : '100%' }} />
+                        style={{ size: this.clicked ? '10%' : '20%' }} />
                 </div>
                 <Info />
                 <Share />
                 <Profile />
                 <Settings />
                 <Upgrades />
+                <Stickers />
+                <Statics />
             </section >
         )
     }

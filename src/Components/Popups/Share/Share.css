@@ -1,0 +1,79 @@
+.divBackground {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.menuShare {
+    max-width: 512px;
+    height: 350px;
+}
+
+.divSocialNetworks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    height: 100px;
+}
+
+.socialNetwork {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 10px;
+}
+
+.fa-whatsapp:before, .fa-twitter:before, .fa-facebook-f:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+}
+
+.snIcon {
+    position: relative;
+    font-size: 4em;
+    width: 96px;
+    height: 96px;
+    color: #eee;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.snIcon:hover {
+    margin-top: 10px;
+    box-shadow: none;
+    transition: 0.2s;
+}
+
+.w {
+    background: #4dc247;
+    box-shadow: 0 5px 0 0 #1c6918;
+}
+
+.f {
+    background: #3b5998;
+    box-shadow: 0 5px 0 0 #142752;
+}
+
+.t {
+    background: #55acee;
+    box-shadow: 0 5px 0 0 #185481;
+}
+
+.snDescription {
+    color: #eee;
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 10px;
+}

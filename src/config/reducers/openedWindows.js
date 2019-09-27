@@ -177,6 +177,17 @@ function openedWindows(state = initialState, action) {
                 }
             }
             return state;
+        case 'closeAll':
+            state = {
+                upgradesOpen: false,
+                stickersOpen: false,
+                staticsOpen: false,
+                infoOpen: false,
+                shareOpen: false,
+                profileOpen: false,
+                settingsOpen: false,
+            }
+            return state
         default: return state;
     }
 }

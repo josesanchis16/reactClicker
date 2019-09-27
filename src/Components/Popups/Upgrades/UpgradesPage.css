@@ -1,19 +1,28 @@
+
+
 .upgradesSections {
-    margin: 10px;
-    padding: 10px;
-    border: 2px solid #eee;
-    border-radius: 10px;
     color: #eee;
+    border-radius: 10px;
+    margin: 10px auto;
+    overflow: hidden;
 }
 
-.upgradesSubTitle {
-    font-size: 1.2em;
+.generalSections {
+    padding: 20px;
+}
+
+.generalSections>div:first-child {
+    margin-bottom: 35px;
+}
+
+.generalSections>div:last-child{
+    margin-top: 35px;
 }
 
 .scrollUpgrades {
     padding-top: 10px;
     padding-bottom: 10px;
-    overflow: auto;
+    overflow: scroll;
     display: flex;
     justify-content: flex-start;
     align-items: center;

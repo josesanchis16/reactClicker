@@ -30,3 +30,40 @@ code {
   margin: auto;
   overflow: auto;
 }
+
+.headerPopup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 10px;
+  height: 48px;
+}
+
+.roundButtonSmall {
+  width: 24px;
+  height: 24px;
+  background: #537be9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 0 0 #295391;
+  border-radius: 10px;
+  padding: 5px;
+  transition: 0.4s;
+}
+
+.roundButtonSmall:hover {
+  margin-top: 5px;
+  box-shadow: none;
+  transition: 0.2s;
+}
+
+.buttonRed {
+  background: #f34242;
+  box-shadow: 0 3px 0 0 #a01e1e;
+}
+
+.generalSubtitles {
+  font-size: 1.2em;
+  color: #eee;
+}

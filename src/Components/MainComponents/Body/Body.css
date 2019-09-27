@@ -39,10 +39,10 @@ section {
     top: 0;
     bottom: 0;
     margin: auto;
-    width: 90%;
+    width: auto;
     max-width: 384px;
     max-height: 472px;
-    height: auto;
+    height: 50%;
 }
 
 menu {

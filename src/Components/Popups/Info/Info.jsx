@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+//Import Buttons Action
+import buttonsAction from './../../../Actions/buttonsAction';
+
 //Import style
 import './Info.css';
 
@@ -9,11 +12,20 @@ class Info extends Component {
         super(props);
     }
 
+    close = () => {
+        buttonsAction('closePopup');
+        
+    }
+
     render() {
         return (
             <menu style={{ display: this.props.infoOpen ? 'flex' : 'none' }}>
                 <div className="divPopupGeneral">
-                    <p className="titleGeneral">Info</p>
+                    <div className="headerPopup">
+                        {/* <img src="" alt="" className="roundButtonSmall" onPointerUp={}/> */}
+                        <p className="titleGeneral">Info</p>
+                        <img src="/image/fruits/cross.png" onPointerUp={this.close} alt="" className="roundButtonSmall buttonRed" />
+                    </div>
                     <hr />
                 </div>
             </menu>

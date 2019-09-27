@@ -1,0 +1,48 @@
+.stickersSection {
+    position: relative;
+    margin: auto;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stickersList {
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    overflow: auto;
+}
+
+.stickersList>div {
+    width: 132px;
+    height: 205px;
+    margin: 10px;
+}
+
+.stickersList>div>img {
+    width: 132px;
+    height: 190px;
+    margin: 5px;
+    box-shadow: 0 7px 0 0 #917004;
+    border-radius: 5px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.stickersList>div>img:hover {
+    transition: 0.2s;
+    box-shadow: none;
+    margin-top: 15px;
+}
+
+.divUnlocked {
+    font-weight: bold;
+    color: #eee;
+    text-align: center;
+    height: 30px;
+    margin-top: 20px;
+}
